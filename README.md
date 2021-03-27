@@ -66,7 +66,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
     * Selection Screen 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="" width=600>
+<img src="Capture.JPG" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
