@@ -65,7 +65,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 * Custom Maps Screen 
     * Selection Screen 
 ## Wireframes
-<img src="wireram.jpeg" width=600>
+<img src="wireram.jpg" width=600>
 
 
 
