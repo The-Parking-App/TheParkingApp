@@ -1,7 +1,6 @@
 The Parking App - README Template
 ===
 
-# The Parking App
 
 ## Table of Contents
 1. [Overview](#Overview)
