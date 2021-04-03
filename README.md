@@ -98,6 +98,18 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Email       |  string  | The email of the user|
 
 ### Networking
-- [Add list of network requests by screen ]
+- Selection of Parking Lots Screen 
+  - (Read/GET) Query all selections for parking spaces
+      let query = PFQuery(className:"Post")
+  query.whereKey("author", equalTo: currentUser)
+  query.order(byDescending: "createdAt")
+  query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+     if let error = error { 
+        print(error.localizedDescription)
+     } else if let posts = posts {
+        print("Successfully retrieved \(posts.count) posts.")
+    // TODO: Do something with posts...
+     }
+  }
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
