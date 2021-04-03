@@ -77,7 +77,8 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Parking Lot |   int   | A unique value to identify each parking lot|
 | Parking Space | int | The parking space's number|
 | Distance from Entrance | double | Is the distance from the main entrance|
-| Coordinates | double | Is a tuple of type double that gives the longitude and lattidude of the parking space|
+| Longitude | double | Describes the longitude cooridnate|
+| Lattidude | double | Describes the lattidude coordinate|
 | Status | short int | Describes the status of the parking space|
 | Type | short int | Describes the type of parking space (Reserved, Handicap, etc)|
 
