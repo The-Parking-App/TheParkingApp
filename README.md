@@ -81,7 +81,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Status | short int | Describes the status of the parking space|
 | Type | short int | Describes the type of parking space (Reserved, Handicap, etc)|
 
-### Parking Lot
+### Parking Lot Model
 | **Propery** | **Type** | **Description** |
 |:-----------:|:--------:|:---------------:|
 |    ID       |   int    | Unique identifier for the parking lot|
