@@ -98,8 +98,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Email       |  string  | The email of the user|
 
 ### Networking
-
- - Login and Registration Screen
+- Login and Registration Screen
   - (Create/POST) Create a new user
   - (Read/GET) Login authentication for a user
   - (Delete) Delete an account/user at their wish 
