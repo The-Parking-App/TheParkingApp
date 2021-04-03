@@ -76,7 +76,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 |:------------:|:--------:|:---------------:|
 | Parking Space |   int   | A unique value to identify each parking space|
 | Distance from Entrance | double | Is the distance from the main entrance|
----------------------------------------------------------------------------
+
 
 ### Models
 [Add table of models]
