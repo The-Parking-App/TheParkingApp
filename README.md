@@ -122,5 +122,3 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 - Google Maps Screen
   - (Read/GET) Get the google maps api to get directions to the destination
   - (Create/POST) Post new destination to get directions to 
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
