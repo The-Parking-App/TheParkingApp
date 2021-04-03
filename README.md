@@ -89,6 +89,14 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 |    ID       |   int    | Unique identifier for the parking lot|
 | Parking Lot |  string  | The name of the parking lot
 
+#### User Model
+| **Propery** | **Type** | **Description** |
+|:-----------:|:--------:|:---------------:|
+|    ID       |  string  | A unique identifier for the user|
+| Username    |  string  | The username of the user inside the app|
+| Password    |  string  | The password to user's account|
+| Email       |  string  | The email of the user|
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
