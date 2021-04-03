@@ -100,6 +100,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 ### Networking
 - Selection of Parking Lots Screen 
   - (Read/GET) Query all selections for parking spaces
+      '''
       let query = PFQuery(className:"Post")
   query.whereKey("author", equalTo: currentUser)
   query.order(byDescending: "createdAt")
@@ -111,5 +112,6 @@ An app that helps find a free parking spot in a parking lot. This app will provi
     // TODO: Do something with posts...
      }
   }
+  '''
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
