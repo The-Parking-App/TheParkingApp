@@ -71,7 +71,8 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 ## Schema 
 
-### Parking Space Model 
+### Models
+#### Parking Space Model 
 | **Property** | **Type** | **Description** |
 |:------------:|:--------:|:---------------:|
 | Parking Lot |   int   | A unique value to identify each parking lot|
@@ -82,15 +83,12 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Status | short int | Describes the status of the parking space|
 | Type | short int | Describes the type of parking space (Reserved, Handicap, etc)|
 
-### Parking Lot Model
+#### Parking Lot Model
 | **Propery** | **Type** | **Description** |
 |:-----------:|:--------:|:---------------:|
 |    ID       |   int    | Unique identifier for the parking lot|
 | Parking Lot |  string  | The name of the parking lot
 
-
-### Models
-[Add table of models]
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
