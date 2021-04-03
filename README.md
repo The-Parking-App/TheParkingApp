@@ -98,6 +98,12 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Email       |  string  | The email of the user|
 
 ### Networking
+
+ - Login and Registration Screen
+  - (Create/POST) Create a new user
+  - (Read/GET) Login authentication for a user
+  - (Delete) Delete an account/user at their wish 
+ 
 - Selection of Parking Lots Screen 
   - (Read/GET) Query all selections for parking spaces
       ```swift
@@ -113,5 +119,8 @@ An app that helps find a free parking spot in a parking lot. This app will provi
             }
          }
          ```
+
+- Google Maps Screen
+ 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
