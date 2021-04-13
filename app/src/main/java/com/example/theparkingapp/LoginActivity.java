@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
      * Returns:     void
      */
     private void goMainActivity() {
-        Intent main = new Intent(this, MainActivity.class);
+        Intent main = new Intent(this, SelectionActivity.class);
         startActivity(main);
         finish();
     }
