@@ -1,11 +1,7 @@
 package com.example.theparkingapp;
 
 import com.parse.ParseClassName;
-import com.parse.ParseFile;
 import com.parse.ParseObject;
-import com.parse.ParseUser;
-
-import java.util.List;
 
 @ParseClassName("ParkingLot")
 public class ParkingLot extends ParseObject {
@@ -13,7 +9,7 @@ public class ParkingLot extends ParseObject {
     public static final String KEY_LOT_NUMBER = "lot_number";
     public static final String KEY_LOT_LONG = "lot_long";
     public static final String KEY_LOT_LAT = "lot_lat";
-    public static final String KEY_CREATED_AT = "createdAt";
+    public static final String CREATED_AT = "createdAt";
 
 
     public String getKeyLotName() {

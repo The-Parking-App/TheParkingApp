@@ -14,7 +14,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.theparkingapp.ParkingLot.KEY_CREATED_AT;
+import static com.example.theparkingapp.ParkingLot.CREATED_AT;
 
 public class SelectionActivity extends AppCompatActivity {
     RecyclerView rvSelection;
@@ -47,7 +47,7 @@ public class SelectionActivity extends AppCompatActivity {
         ParseQuery<ParkingLot> query = ParseQuery.getQuery(ParkingLot.class);
         query.include(ParkingLot.KEY_LOT_NAME);
         query.setLimit(10);
-        query.addAscendingOrder(KEY_CREATED_AT);
+        query.addAscendingOrder(CREATED_AT);
         query.findInBackground(new FindCallback<ParkingLot>() {
             @Override
             public void done(List<ParkingLot> parkingLot, ParseException e) {
