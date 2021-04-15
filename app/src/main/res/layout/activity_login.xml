@@ -12,12 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
+        android:hint="@string/name_some_org"
+        android:inputType="textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -25,12 +26,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
+        android:hint="@string/password"
+        android:inputType="text|textWebPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/etUserName"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btRegister"
@@ -38,7 +40,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="36dp"
         android:backgroundTint="#EF744D"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +52,7 @@
         android:layout_height="44dp"
         android:layout_marginTop="48dp"
         android:backgroundTint="#03A9F4"
-        android:text="Login"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +63,7 @@
         android:layout_width="148dp"
         android:layout_height="125dp"
         android:layout_marginTop="52dp"
+        android:contentDescription="@string/log_bg_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

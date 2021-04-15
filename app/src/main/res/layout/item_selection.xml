@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#ECE1E1"
-    android:orientation="horizontal"
-    android:paddingTop="30dp"
+    android:layout_height="100dp"
+    android:background="@drawable/lot_bg"
+    android:paddingTop="10dp"
     android:paddingBottom="30dp">
+
 
     <TextView
         android:id="@+id/tvLotName"
         android:layout_width="275dp"
-        android:layout_height="48dp"
-        android:paddingLeft="12dp"
-        android:text="Parking Lot 49"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:paddingStart="12dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:text="Parking Lot 49" />
 
     <Button
         android:id="@+id/btnDirection"
@@ -27,8 +29,9 @@
         android:paddingTop="4dp"
         android:paddingRight="4dp"
         android:paddingBottom="4dp"
-        android:text="Button"
+        android:text="@string/get_space"
         android:textColor="#03A9F4"
         android:textStyle="bold"
-        tools:text="Get Directions" />
+        tools:text="Get a Space" />
+
 </LinearLayout>
