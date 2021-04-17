@@ -27,7 +27,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 **Required Must-have Stories**
 
-* User signup/login
+[X] * User signup/login
 * User selects a destination
 * Display driving directions to the parking lot
 * Display driving directions to the parking space
@@ -39,12 +39,12 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 ### 2. Screen Archetypes
 
-* Splash Screen
-   * Shows up everytime user opens the app 
-* Login/Registration
-   * Login screen
-   * Registration screen
-* Selection Screen
+[X] * Splash Screen
+[X]    * Shows up everytime user opens the app 
+[X] * Login/Registration
+[X]    * Login screen
+[X]    * Registration screen
+[X] * Selection Screen
     * User selects a destination
 * Google Maps Screen
     * Display driving directions to the parking lot
