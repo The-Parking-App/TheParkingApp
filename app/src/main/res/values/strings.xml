@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TheParkingApp</string>
+    <string name="name_some_org">name@some.org</string>
+    <string name="log_bg_image">log_bg_image</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password">Password</string>
+    <string name="get_space">Get Space</string>
 </resources>

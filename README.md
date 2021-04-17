@@ -120,3 +120,11 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 - Google Maps Screen
   - (Read/GET) Get the google maps api to get directions to the destination
+  
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='TheParkingApp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (https://www.screentogif.com/)..
