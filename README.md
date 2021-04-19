@@ -83,6 +83,9 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Status | short int | Describes the status of the parking space|
 | Type | short int | Describes the type of parking space (Reserved, Handicap, etc)|
 
+Distance to Parking Lot Exit in Feet
+=ACOS(COS(RADIANS(90-Exit_Longitude))*COS(RADIANS(90-ParkingSpace_Longitude))+SIN(RADIANS(90-Exit_Longitude))*SIN(RADIANS(90-ParkingSpace_Longitude))*COS(RADIANS(Exit_Latitude-ParkingSpace_Latitude)))*3959*5280
+
 #### Parking Lot Model
 | **Propery** | **Type** | **Description** |
 |:-----------:|:--------:|:---------------:|
