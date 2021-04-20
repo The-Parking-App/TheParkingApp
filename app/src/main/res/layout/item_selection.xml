@@ -5,16 +5,17 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@drawable/lot_bg"
-    android:paddingTop="10dp"
-    android:paddingBottom="30dp">
+    android:background="@color/white"
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="#F5F5F5"
+    android:padding="5dp"
+   >
 
 
     <TextView
         android:id="@+id/tvLotName"
         android:layout_width="275dp"
         android:layout_height="56dp"
-        android:background="@color/white"
         android:paddingStart="12dp"
         android:textSize="24sp"
         android:textStyle="bold"

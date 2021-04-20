@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.secrets_gradle_plugin' version '0.5'
+
 }
 def securePropertiesFile = rootProject.file("secure.properties")
 def secureProperties = new Properties()
@@ -41,8 +43,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    implementation 'com.karumi:dexter:6.2.2'
     // Parse SDK
     implementation 'com.github.parse-community.Parse-SDK-Android:parse:1.25.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2' // for logging API calls to LogCat
+    //Google SDK
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
 }

@@ -1,6 +1,7 @@
 package com.example.theparkingapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
     private Context context;
@@ -64,6 +67,9 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
             btnDirection.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent i = new Intent(context , GetDirection.class);
+                    i.putExtra("Lot", parkingLot.getKeyLotName() );
+                    context.startActivity(i);
 
                 }
             });
