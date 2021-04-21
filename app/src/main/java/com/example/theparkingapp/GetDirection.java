@@ -27,12 +27,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.single.PermissionListener;
 
 public class GetDirection extends AppCompatActivity {
     private int REQUEST_CODE = 111;
@@ -40,8 +34,7 @@ public class GetDirection extends AppCompatActivity {
     private SupportMapFragment mapFragment;
     private TextView lot;
     private String lotname;
-    MarkerOptions userLocation;
-    Polyline currentPolyline;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +56,6 @@ public class GetDirection extends AppCompatActivity {
         else{
             ActivityCompat.requestPermissions(GetDirection.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
         }
-
-
-
 
 
     }
