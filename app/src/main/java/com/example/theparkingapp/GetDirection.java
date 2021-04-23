@@ -12,6 +12,7 @@ import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class GetDirection extends AppCompatActivity {
     private SupportMapFragment mapFragment;
     private TextView lot;
     private String lotname;
+    private String TAG = "GetDir";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +74,7 @@ public class GetDirection extends AppCompatActivity {
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
                            LatLng latlng = new LatLng(32.7261602, -97.1110038);
+                           Log.i(TAG,"position: " + latlng);
 
                            MarkerOptions markerOptions = new MarkerOptions().position(latlng).title(lotname);
                             googleMap.setMyLocationEnabled(true);

@@ -18,14 +18,14 @@ public class ParkingLot extends ParseObject {
 
     public void setKeyLotName(String lot_name) { put(KEY_LOT_NAME, lot_name); }
 
-    public String getKeyLotNumber() { return getString(KEY_LOT_NUMBER); }
+    public Integer getKeyLotNumber() { return getInt(KEY_LOT_NUMBER); }
 
     public void setKeyLotNumber(String lot_number) { put(KEY_LOT_LONG, lot_number); }
 
-    public String getKeyLotLong() { return getString(KEY_LOT_LONG); }
+    public Long getKeyLotLong() { return getLong(KEY_LOT_LONG); }
     public void setKeyLotLong(String lot_long) { put(KEY_LOT_LONG, lot_long); }
 
-    public String getKeyLotLat() { return getString(KEY_LOT_LAT); }
+    public Long getKeyLotLat() { return getLong(KEY_LOT_LAT); }
     public void setKeyLotLat(String lot_lat) { put(KEY_LOT_LONG, lot_lat); }
 
 
