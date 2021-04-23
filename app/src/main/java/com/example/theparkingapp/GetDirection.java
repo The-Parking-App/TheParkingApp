@@ -73,12 +73,16 @@ public class GetDirection extends AppCompatActivity {
                         @SuppressLint("MissingPermission")
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
-                           LatLng latlng = new LatLng(32.7261602, -97.1110038);
+//                           LatLng latlng = new LatLng(32.7261602, -97.1110038);
+                           double lat = getIntent().getDoubleExtra("lot_lat", 0.0);
+                           double lng = getIntent().getDoubleExtra("lot_long",0.0);
+                           Log.i(TAG,"latitude: " + lat + "  longitude: " + lng);
+                           LatLng latlng = new LatLng(lat, lng );
                            Log.i(TAG,"position: " + latlng);
 
                            MarkerOptions markerOptions = new MarkerOptions().position(latlng).title(lotname);
                             googleMap.setMyLocationEnabled(true);
-                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng, 10));
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng, 17));
 
                             googleMap.addMarker(markerOptions).showInfoWindow();
                         }

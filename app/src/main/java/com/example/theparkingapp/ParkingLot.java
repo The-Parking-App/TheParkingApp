@@ -22,10 +22,10 @@ public class ParkingLot extends ParseObject {
 
     public void setKeyLotNumber(String lot_number) { put(KEY_LOT_LONG, lot_number); }
 
-    public Long getKeyLotLong() { return getLong(KEY_LOT_LONG); }
+    public double getKeyLotLong() { return getDouble(KEY_LOT_LONG); }
     public void setKeyLotLong(String lot_long) { put(KEY_LOT_LONG, lot_long); }
 
-    public Long getKeyLotLat() { return getLong(KEY_LOT_LAT); }
+    public double getKeyLotLat() { return getDouble(KEY_LOT_LAT); }
     public void setKeyLotLat(String lot_lat) { put(KEY_LOT_LONG, lot_lat); }
 
 
