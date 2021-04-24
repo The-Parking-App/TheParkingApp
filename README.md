@@ -45,9 +45,9 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 [X]    * Login screen
 [X]    * Registration screen
 [X] * Selection Screen
-    * User selects a destination
-* Google Maps Screen
-    * Display driving directions to the parking lot
+[X]  * User selects a destination
+[X] * Google Maps Screen
+[X]  * Display driving directions to the parking lot
 * Custom Maps Screen
     * Display driving directions to the parking space
 
@@ -128,6 +128,6 @@ Distance to Parking Lot Exit in Feet
 
 Here's a walkthrough of implemented user stories:
 
-<img src='TheParkingApp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='TheParkingApp2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (https://www.screentogif.com/)..
