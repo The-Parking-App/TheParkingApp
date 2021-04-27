@@ -3,6 +3,8 @@ package com.example.theparkingapp;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 
+import static java.lang.Integer.parseInt;
+
 @ParseClassName("ParkingLot")
 public class ParkingLot extends ParseObject {
     public static final String KEY_LOT_NAME = "lot_name";
@@ -25,7 +27,7 @@ public class ParkingLot extends ParseObject {
 
     public Integer getKeyFreeSpace() { return getInt(KEY_FREE_SPACE); }
 
-    public void setKeyFreeSpace(String free_space_count) { put(KEY_FREE_SPACE, free_space_count); }
+    public void setKeyFreeSpace(String free_space_count) { put(KEY_FREE_SPACE, parseInt(free_space_count)); }
     public double getKeyLotLong() { return getDouble(KEY_LOT_LONG); }
     public void setKeyLotLong(String lot_long) { put(KEY_LOT_LONG, lot_long); }
 

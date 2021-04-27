@@ -23,6 +23,7 @@ public class SelectionActivity extends AppCompatActivity {
     List<ParkingLot> parkingLots;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
