@@ -5,5 +5,6 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="password">Password</string>
-    <string name="get_space">Get Space</string>
+    <string name="get_direction">Directions</string>
+    <string name="free_space">400 Available Spaces</string>
 </resources>

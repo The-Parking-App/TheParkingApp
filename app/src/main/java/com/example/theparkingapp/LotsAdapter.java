@@ -58,15 +58,18 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
     //Define a ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvLotName;
+        TextView tvFreeSpace;
         Button btnDirection;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvLotName=itemView.findViewById(R.id.tvLotName);
+            tvFreeSpace=itemView.findViewById(R.id.tvFreeSpace);
             btnDirection=itemView.findViewById(R.id.btnDirection);
         }
 
         public void bind(ParkingLot parkingLot) {
             tvLotName.setText(parkingLot.getKeyLotName());
+            tvFreeSpace.setText(String.valueOf(parkingLot.getKeyFreeSpace())+" Available Spaces");
 //            Log.i(TAG, parkingLot.getKeyLotNumber()+ "  latitude: " + parkingLot.getKeyLotLat() + "  longitude: " + parkingLot.getKeyLotLong());
 
             btnDirection.setOnClickListener(new View.OnClickListener() {
