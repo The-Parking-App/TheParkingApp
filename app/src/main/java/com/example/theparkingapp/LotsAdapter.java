@@ -98,7 +98,7 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
                     setParkingstatus();
                     decreaseAvailableSpace();
                   //  parkingLot.setKeyFreeSpace("100");
-                    Log.i(TAG, lat + lon);
+                    Log.i(TAG, lat + lon + "  " + spaceNo);
                     Uri gmmIntentUri = Uri.parse("google.navigation:q="+lat+","+lon);
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                     mapIntent.setPackage("com.google.android.apps.maps");
@@ -153,6 +153,7 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
     //query available space
     private void queryspaces() {
         ParseQuery<ParkingSpace> query = ParseQuery.getQuery(ParkingSpace.class);
+        query.addAscendingOrder(ParkingSpace.KEY_SPACE_DISTANCE);
         query.whereEqualTo("status", 1);
         query.getFirstInBackground(new GetCallback<ParkingSpace>() {
 
