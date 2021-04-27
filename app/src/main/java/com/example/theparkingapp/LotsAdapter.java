@@ -2,6 +2,7 @@ package com.example.theparkingapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,12 +72,18 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
             btnDirection.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context , GetDirection.class);
-
-                    i.putExtra("Lot", parkingLot.getKeyLotName() );
-                    i.putExtra("lot_long", parkingLot.getKeyLotLong());
-                    i.putExtra("lot_lat", parkingLot.getKeyLotLat());
-                    context.startActivity(i);
+                    String lat = String.valueOf(parkingLot.getKeyLotLat());
+                    String lon = String.valueOf(parkingLot.getKeyLotLong());
+                    String Uri_string = ("http://maps.google.com/maps?&api=1&map_action=map&layer=traffic&dir_action=navigate&addr="+lon+","+lat);
+                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                            Uri.parse(Uri_string));
+                    context.startActivity(intent);
+//                    Intent i = new Intent(context , GetDirection.class);
+//
+//                    i.putExtra("Lot", parkingLot.getKeyLotName() );
+//                    i.putExtra("lot_long", parkingLot.getKeyLotLong());
+//                    i.putExtra("lot_lat", parkingLot.getKeyLotLat());
+//                    context.startActivity(i);
 
                 }
             });
