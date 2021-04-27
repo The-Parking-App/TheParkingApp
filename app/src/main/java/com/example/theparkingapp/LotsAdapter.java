@@ -77,10 +77,15 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
                 public void onClick(View v) {
                     String lat = String.valueOf(parkingLot.getKeyLotLat());
                     String lon = String.valueOf(parkingLot.getKeyLotLong());
-                    String Uri_string = ("http://maps.google.com/maps?&api=1&map_action=map&layer=traffic&dir_action=navigate&addr="+lon+","+lat);
-                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                            Uri.parse(Uri_string));
-                    context.startActivity(intent);
+//                    String Uri_string = ("http://maps.google.com/maps?&api=1&map_action=map&layer=traffic&dir_action=navigate&addr="+lon+","+lat);
+//                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+//                            Uri.parse(Uri_string));
+//                    context.startActivity(intent);
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q="+lat+","+lon);
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    Log.i(TAG, "Long, Lat: " + lon +"," + lat);
+                    context.startActivity(mapIntent);
 //                    Intent i = new Intent(context , GetDirection.class);
 //
 //                    i.putExtra("Lot", parkingLot.getKeyLotName() );
