@@ -1,38 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="70dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
     android:background="@color/white"
-    android:layout_marginBottom="10dp"
     android:backgroundTint="#F5F5F5"
-    android:padding="5dp"
-   >
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    app:barrierMargin="10dp">
 
 
     <TextView
         android:id="@+id/tvLotName"
-        android:layout_width="275dp"
-        android:layout_height="56dp"
-        android:paddingStart="12dp"
-        android:textSize="24sp"
+        android:layout_width="241dp"
+        android:layout_height="35dp"
+        android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307"
         tools:text="Parking Lot 49" />
+
+    <TextView
+        android:id="@+id/tvFreeSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/free_space"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLotName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnDirection"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ECE1E1"
-        android:paddingLeft="4dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="116dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#F5F5F5"
+        android:paddingStart="8dp"
+        android:paddingLeft="2dp"
         android:paddingTop="4dp"
         android:paddingRight="4dp"
         android:paddingBottom="4dp"
-        android:text="@string/get_space"
+        android:text="@string/get_direction"
         android:textColor="#03A9F4"
         android:textStyle="bold"
-        tools:text="Get a Space" />
+        app:icon="@drawable/get_direction"
+        app:iconGravity="end"
+        app:iconSize="17dp"
+        app:iconTint="#03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvLotName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322"
+        tools:text="Directions" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

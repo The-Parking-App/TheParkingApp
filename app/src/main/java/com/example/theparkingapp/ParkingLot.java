@@ -9,6 +9,7 @@ public class ParkingLot extends ParseObject {
     public static final String KEY_LOT_NUMBER = "lot_number";
     public static final String KEY_LOT_LONG = "lot_long";
     public static final String KEY_LOT_LAT = "lot_lat";
+    public static final String KEY_FREE_SPACE = "free_space_count";
     public static final String CREATED_AT = "createdAt";
 
 
@@ -22,6 +23,9 @@ public class ParkingLot extends ParseObject {
 
     public void setKeyLotNumber(String lot_number) { put(KEY_LOT_LONG, lot_number); }
 
+    public Integer getKeyFreeSpace() { return getInt(KEY_FREE_SPACE); }
+
+    public void setKeyFreeSpace(String free_space_count) { put(KEY_FREE_SPACE, free_space_count); }
     public double getKeyLotLong() { return getDouble(KEY_LOT_LONG); }
     public void setKeyLotLong(String lot_long) { put(KEY_LOT_LONG, lot_long); }
 
