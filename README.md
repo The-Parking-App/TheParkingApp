@@ -79,7 +79,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 | Parking Space | int | The parking space's number|
 | Distance from Entrance | double | Is the distance from the main entrance|
 | Longitude | double | Describes the longitude cooridnate|
-| Lattidude | double | Describes the lattidude coordinate|
+| Latidude | double | Describes the lattidude coordinate|
 | Status | short int | Describes the status of the parking space|
 | Type | short int | Describes the type of parking space (Reserved, Handicap, etc)|
 
@@ -89,8 +89,12 @@ Distance to Parking Lot Exit in Feet
 #### Parking Lot Model
 | **Propery** | **Type** | **Description** |
 |:-----------:|:--------:|:---------------:|
-|    ID       |   int    | Unique identifier for the parking lot|
+|   Lot Number|   int    | Unique identifier for the parking lot|
 | Parking Lot |  string  | The name of the parking lot
+| Longitude | double | Describes the longitude cooridnate|
+| Latidude | double | Describes the lattidude coordinate|
+| Free Space Count | short int | Describes the number of free spaces|
+| Street Address | string | Describes the address of the individual parking lot|
 
 #### User Model
 | **Propery** | **Type** | **Description** |
