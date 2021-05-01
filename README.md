@@ -27,7 +27,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 **Required Must-have Stories**
 
-[X] * User signup/login
+* User signup/login
 * User selects a destination
 * Display driving directions to the parking lot
 * Display driving directions to the parking space
@@ -93,7 +93,7 @@ Distance to Parking Lot Exit in Feet
 | Parking Lot |  string  | The name of the parking lot
 | Longitude | double | Describes the longitude cooridnate|
 | Latidude | double | Describes the lattidude coordinate|
-| Free Space Count | short int | Describes the number of free spaces|
+| Free Space Count | int | Describes the number of free spaces|
 | Street Address | string | Describes the address of the individual parking lot|
 
 #### User Model
@@ -132,6 +132,6 @@ Distance to Parking Lot Exit in Feet
 
 Here's a walkthrough of implemented user stories:
 
-<img src='TheParkingApp2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='TheParkingApp3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (https://www.screentogif.com/)..
