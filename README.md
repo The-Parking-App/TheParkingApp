@@ -47,7 +47,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 - [x] Selection Screen
 - [x] User selects a destination
 - [x] Google Maps Screen
-- [x]  * Display driving directions to the parking lot
+- [x] Display driving directions to the parking lot
 * Custom Maps Screen
     * Display driving directions to the parking space
 
