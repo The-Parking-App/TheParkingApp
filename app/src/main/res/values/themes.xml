@@ -2,9 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.TheParkingApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">#DFDEDF</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:ambientShadowAlpha">0.8</item>
+        <item name="android:spotShadowAlpha">0.8</item>
 
     </style>
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar"

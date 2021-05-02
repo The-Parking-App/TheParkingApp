@@ -3,6 +3,7 @@ package com.example.theparkingapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,8 @@ import java.util.List;
 import static com.example.theparkingapp.ParkingLot.CREATED_AT;
 
 public class SelectionActivity extends AppCompatActivity {
+    private SwipeRefreshLayout swipeContainer;
+
     RecyclerView rvSelection;
     public static final String TAG="SelectionActivity";
     LotsAdapter  adapter;
@@ -28,6 +31,14 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
+        // Lookup Swipe Container View
+        swipeContainer = findViewById(R.id.swipeContainer);
+        swipeContainer.setColorSchemeResources(
+                android.R.color.holo_blue_dark,
+                android.R.color.white,
+                android.R.color.holo_orange_dark,
+                android.R.color.white);
+        // setup refresh listner with triggers new data loading
         //Find the recycler View
         rvSelection=findViewById(R.id.rvSelection);
         // Init the list of lots and adapter
@@ -38,6 +49,14 @@ public class SelectionActivity extends AppCompatActivity {
 
         rvSelection.setLayoutManager(layoutManager);
         rvSelection.setAdapter(adapter);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                adapter.clear();
+                queryLots();
+                swipeContainer.setRefreshing(false);
+            }
+        });
 
         queryLots();
 

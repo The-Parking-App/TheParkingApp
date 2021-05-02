@@ -8,14 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
@@ -79,18 +82,29 @@ public class LotsAdapter extends RecyclerView.Adapter<LotsAdapter.ViewHolder> {
         TextView tvLotName;
         TextView tvFreeSpace;
         Button btnDirection;
+        ImageView ivThumb;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvLotName=itemView.findViewById(R.id.tvLotName);
             tvFreeSpace=itemView.findViewById(R.id.tvFreeSpace);
             btnDirection=itemView.findViewById(R.id.btnDirection);
+            ivThumb=itemView.findViewById(R.id.ivThumb);
         }
 
         public void bind(ParkingLot parkingLot) {
             tvLotName.setText(parkingLot.getKeyLotName());
-            tvFreeSpace.setText(String.valueOf(parkingLot.getKeyFreeSpace())+" Available Spaces");
+//            tvFreeSpace.setText(String.valueOf(parkingLot.getKeyFreeSpace())+" Available Spaces");
             tvFreeSpace.setText(String.valueOf(parkingLot.getKeyFreeSpace())+" Available Spaces");
 //            Log.i(TAG, parkingLot.getKeyLotNumber()+ "  latitude: " + parkingLot.getKeyLotLat() + "  longitude: " + parkingLot.getKeyLotLong());
+            ParseFile image = parkingLot.getImage();
+            if (image != null){
+                String URL = image.getUrl();
+                Log.i(TAG,"URL: " + URL );
+                Glide.with(context).load(URL)
+                        .into(ivThumb);
+            }
+
             queryspaces();
             btnDirection.setOnClickListener(new View.OnClickListener() {
                 @Override
