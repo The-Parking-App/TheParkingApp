@@ -10,19 +10,22 @@
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp">
 
-    <RelativeLayout
-        android:id="@+id/rlItemLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ContraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivThumb"
             android:layout_width="130dp"
-            android:layout_height="110dp"
+            android:layout_height="130dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="44dp"
+            android:contentDescription="@string/parking_lot_image"
+            app:layout_constraintBottom_toTopOf="@+id/tvFreeSpace"
+            app:layout_constraintEnd_toStartOf="@+id/btnDirection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLotName"
             app:srcCompat="@drawable/parking"
             card_view:srcCompat="@drawable/parking" />
 
@@ -32,12 +35,16 @@
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="94dp"
-            android:layout_marginEnd="94dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="40dp"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             card_view:text="Parking Lot 49" />
 
         <TextView
@@ -47,29 +54,27 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="94dp"
-            android:layout_marginEnd="94dp"
             android:layout_marginBottom="5dp"
             android:text="@string/free_space"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btnDirection"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
+            android:layout_width="146dp"
+            android:layout_height="61dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="230dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="15dp"
             android:backgroundTint="@color/white"
             android:paddingStart="8dp"
             android:paddingTop="4dp"
@@ -82,8 +87,11 @@
             app:iconGravity="end"
             app:iconSize="17dp"
             app:iconTint="#03A9F4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             card_view:text="Get Directions"
             card_view:visibility="visible" />
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

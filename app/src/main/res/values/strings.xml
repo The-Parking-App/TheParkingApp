@@ -7,4 +7,5 @@
     <string name="password">Password</string>
     <string name="get_direction">Get Directions</string>
     <string name="free_space">400 Available Spaces</string>
+    <string name="parking_lot_image">Parking Lot Image</string>
 </resources>
