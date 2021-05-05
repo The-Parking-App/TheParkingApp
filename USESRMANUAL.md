@@ -30,4 +30,4 @@ Selection Screen
 
 Once logged in you will be brought to a screen where you can select all the Parking Spaces that are available to park in. In order to get directions to these spots click the **Get Directions** button. From here you will be taken to a google maps screen that gives direction to this parking spot.
 
-<img src="/img/selection_screen.PNG" height=300>
+<img src="/gifs/selection_screen.PNG" height=300>
