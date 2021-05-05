@@ -22,7 +22,7 @@ Registration Screen
 - Create an account with us by filling in the required fields: name, email, passwords
 - Click the **Sign Up** button to login and be taken to the Selection Screen
 
-<img src="/gifs/selection_screen.PNG" height=300>
+<img src="/gifs/signup_screen.PNG" height=300>
 
 
 Selection Screen
