@@ -13,7 +13,7 @@ Login Screen
 - Create an account with us, by clicking the **Sign Up** button
 - This app has persistent login and only requires to be login once
 
-<img src="/gifs/login_screen.PNG">
+<img src="/gifs/login_screen.PNG" height=300>
 
 
 Registration Screen 
@@ -22,7 +22,7 @@ Registration Screen
 - Create an account with us by filling in the required fields: name, email, passwords
 - Click the **Sign Up** button to login and be taken to the Selection Screen
 
-<img src="/gifs/selection_screen.PNG" >
+<img src="/gifs/selection_screen.PNG" height=300>
 
 
 Selection Screen
@@ -30,4 +30,4 @@ Selection Screen
 
 Once logged in you will be brought to a screen where you can select all the Parking Spaces that are available to park in. In order to get directions to these spots click the **Get Directions** button. From here you will be taken to a google maps screen that gives direction to this parking spot.
 
-<img src="/img/selection_screen.PNG">
+<img src="/img/selection_screen.PNG" height=300>
