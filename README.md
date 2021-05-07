@@ -135,3 +135,7 @@ Here's a walkthrough of implemented user stories:
 <img src='TheParkingApp3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (https://www.screentogif.com/)..
+
+## Admin Portal 
+
+Here's a screenshot of admin portal, where an admin can mark parking lots available or unavailable.
