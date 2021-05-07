@@ -50,6 +50,7 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 - [x] Display driving directions to the parking lot
 * Custom Maps Screen
     * Display driving directions to the parking space
+- [x] Admin Portal
 
 ### 3. Navigation
 
