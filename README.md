@@ -140,3 +140,5 @@ GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (htt
 ## Admin Portal 
 
 Here's a screenshot of admin portal, where an admin can mark parking lots available or unavailable.
+
+<img src="https://github.com/The-Parking-App/TheParkingApp/blob/master/gifs/adminportal.png" width=1200>
