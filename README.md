@@ -28,9 +28,9 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 **Required Must-have Stories**
 
 * User signup/login
-* User selects a destination
-* Display driving directions to the parking lot
-* Display driving directions to the parking space
+* User selects a destination parking lot
+* Display driving directions to a parking space within the selected parking lot
+
 
 **Optional Nice-to-have Stories**
 
@@ -39,17 +39,16 @@ An app that helps find a free parking spot in a parking lot. This app will provi
 
 ### 2. Screen Archetypes
 
-- [x] Splash Screen
-- [x] Shows up everytime user opens the app 
-- [x] Login/Registration
-- [x] Login screen
-- [x] Registration screen
-- [x] Selection Screen
-- [x] User selects a destination
+- [x] **Splash Screen**
+   - [x] Shows up everytime user opens the app 
+- [x] **Login/Registration**
+   - [x] Login screen
+   - [x] Registration screen
+- [x] **Selection Screen**
+   - [x] User selects a destination
+   - [x] User clicks Logout to navigate to Login screen
 - [x] Google Maps Screen
-- [x] Display driving directions to the parking lot
-* Custom Maps Screen
-    * Display driving directions to the parking space
+   - [x] Display driving directions to the parking space
 - [x] Admin Portal
 
 ### 3. Navigation
@@ -113,17 +112,23 @@ Distance to Parking Lot Exit in Feet
 - Selection of Parking Lots Screen 
   - (Read/GET) Query all selections for parking spaces
       ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
+         ParseQuery<ParkingSpace> query = ParseQuery.getQuery(ParkingSpace.class);
+        query.addAscendingOrder(ParkingSpace.KEY_SPACE_DISTANCE);
+        query.whereEqualTo("status", 1);
+        query.getFirstInBackground(new GetCallback<ParkingSpace>() {
+
+            @Override
+            public void done(ParkingSpace p, ParseException e) {
+                if (e == null) {
+                    parkingSpace =  p;
+                    lat = String.valueOf(parkingSpace.getSpaceLat());
+                    lon = String.valueOf(parkingSpace.getSpaceLon());
+                    spaceNo = parkingSpace.getSpaceNumber();
+                    parkinglotno = parkingSpace.getLotNumber();
+                }
             }
-         }
+        });
+    }
          ```
 
 - Google Maps Screen
@@ -133,7 +138,7 @@ Distance to Parking Lot Exit in Feet
 
 Here's a walkthrough of implemented user stories:
 
-<img src='TheParkingApp3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='TheParkingApp4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://github.com/NickeManarin/ScreenToGif) (https://www.screentogif.com/)..
 
